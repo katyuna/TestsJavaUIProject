@@ -1,4 +1,6 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.After;
 import org.junit.Before;
@@ -20,11 +22,15 @@ public class TestClass {
         //Открыть страницу
         driver.get("https://www.google.com");
         //Проверить заголовок страницы
-        String expectedTitle = "Example Domain";
+        String expectedTitle = "Google";
         String actualTitle = driver.getTitle();
         assertEquals(expectedTitle, actualTitle);
-    }
 
+        WebElement searchField = driver.findElement(By.xpath("//textarea[@id='APjFqb']"));
+        WebElement searchButton = driver.findElement(By.xpath("(//input[@name='btnK'])[2]"));
+        searchField.sendKeys("Selenium WebDriver");
+        searchButton.click();
+    }
     @After
     public void tearDown() {
         if (driver != null) {
