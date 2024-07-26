@@ -36,6 +36,6 @@ public class CommonSearchTest extends BaseTest{
                 break;
             }
         }
-        assertTrue("Результаты поиска не соответсвуют поисковому запросу", relevantResults);
+        assertTrue("Результаты поиска не соответствуют поисковому запросу", relevantResults);
     }
 }
