@@ -33,15 +33,15 @@ public class GoogleMainPage {
     {
         this.searchField.setValue(searchText).pressEnter();
     }
-    //Метод проверки поиска
+    //Видимость блока результатов
     public boolean isResult() {
         return results.isDisplayed();
     }
-    //Метод проверки показа первого результата в поиске
+    //Видимость первого результата в поиске
     public boolean isFirstResult() {
         return firstResult.isDisplayed();
     }
-    // Метод для получения заголовков из коллекции
+    //Метод для получения заголовков из коллекции
     public List<String> getResultTitles() {
         List<String> titles = new ArrayList<>();
         for (SelenideElement title : resultTitles) {
